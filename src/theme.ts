@@ -18,11 +18,6 @@ const theme = createMuiTheme({
     },
   },
   overrides: {
-    MuiButtonBase: {
-      focusVisible: {
-        background: "blue",
-      },
-    },
     MuiButton: {
       text: {
         textTransform: "none",
@@ -30,9 +25,6 @@ const theme = createMuiTheme({
         "&:hover": {
           color: primary,
         },
-      },
-      focusVisible: {
-        background: "red",
       },
     },
     MuiAppBar: {

@@ -7,7 +7,6 @@ import {
   Grid,
   IconButton,
   Link,
-  Button,
   Dialog,
   DialogContent,
 } from "@material-ui/core";

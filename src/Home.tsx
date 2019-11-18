@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       position: "relative",
       padding: theme.spacing(2, 2, 6, 2),
-
       height: "100%",
     },
     title: {
@@ -69,13 +68,13 @@ const Home: React.FC = () => {
               Web
             </Typography>
             <Typography variant="body2">
-              Prestation technique pour assurer la maintenance technique de
-              votre site internet, sa sécurité, le modifier et l'améliorer.
+              Prestation pour assurer la maintenance technique de votre site
+              internet, sa sécurité, le modifier et l'améliorer.
             </Typography>
             <Typography variant="body2">
               Pour votre site vitrine ou de vente en ligne : un suivi
               professionnel de vos CMS, boutiques eCommerce, blog, domaines,
-              emails, serveurs, bases de données et reseaux.
+              emails, serveurs, bases de données et réseaux.
             </Typography>
             {ContactButton}
           </Paper>
@@ -90,13 +89,13 @@ const Home: React.FC = () => {
               Applications
             </Typography>
             <Typography variant="body2">
-              Etude, developpement et maintenance d'applications web, mobile
+              Etude, développement et maintenance d'applications web, mobile
               android &amp; iOS, Windows, MacOS, Linux
             </Typography>
             <Typography variant="body2">
               Utilisation des dernières technologies d'applications cloud, web,
               mobile et logiciel afin de réaliser des interfaces modernes,
-              agréable et intuitives pour une utilisation interne, externe ou
+              agréables et intuitives pour une utilisation interne, externe ou
               publique.
             </Typography>
             {ContactButton}
@@ -113,15 +112,15 @@ const Home: React.FC = () => {
             </Typography>
             <Typography variant="body2">
               L'objectif est de vous faire gagner du temps grâce à
-              l'automatisation vos tâches récurrents tel que la modification de
-              fichiers, traitement de données, recopie, gestion de documents,
-              etc...
+              l'automatisation de vos tâches récurrentes telles que la
+              modification de fichiers, le traitement de données, la recopie, la
+              gestion de documents, etc...
             </Typography>
             <Typography variant="body2">
               Vous manquez de temps mais vous ne savez pas ce qui peut être
-              automatisé et standardisé, une étude dans vos locaux pour
-              identifier les tâches chronophages qui peuvent être réduite grâce
-              a la modernisation et l'industrialisation de vos habitudes.
+              automatisé, une étude d'observation dans vos locaux permet
+              d'identifier les tâches chronophages qui peuvent être réduites
+              grâce à la modernisation et l'industrialisation de vos habitudes.
             </Typography>
             {ContactButton}
           </Paper>

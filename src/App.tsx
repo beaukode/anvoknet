@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import logo from "./img/header-logo.png";
 import { ThemeProvider } from "@material-ui/styles";
+import * as Scroll from "react-scroll";
 import theme from "./theme";
 import Home from "./Home";
 import Contact from "./Contact";
@@ -67,11 +68,25 @@ const App: React.FC = () => {
               <Toolbar component="nav">
                 <img src={logo} alt="Logo Anvok" className={classes.logo} />
                 <div className={classes.title}>Anvok</div>
-                <Button className={classes.button}>Accueil</Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => {
+                    Scroll.animateScroll.scrollToTop();
+                  }}
+                >
+                  Accueil
+                </Button>
                 {/* <Button className={classes.button}>Web &amp; Mobile</Button>
                 <Button className={classes.button}>Applications métiers</Button>
                 <Button className={classes.button}>Consulting DevOps</Button> */}
-                <Button className={classes.button}>Contact</Button>
+                <Button
+                  className={classes.button}
+                  component={Scroll.Link}
+                  to="contact"
+                  smooth={true}
+                >
+                  Contact
+                </Button>
               </Toolbar>
             </Container>
           </AppBar>

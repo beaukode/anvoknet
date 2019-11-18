@@ -10,6 +10,7 @@ import {
   Container,
 } from "@material-ui/core";
 import { ContactSupport as ContactIcon } from "@material-ui/icons";
+import * as Scroll from "react-scroll";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -43,6 +44,9 @@ const Home: React.FC = () => {
       className={classes.button}
       color="primary"
       endIcon={<ContactIcon />}
+      component={Scroll.Link}
+      to="contact"
+      smooth={true}
     >
       Contact
     </Button>

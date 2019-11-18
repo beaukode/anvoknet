@@ -7,11 +7,15 @@ import {
   Grid,
   IconButton,
   Link,
+  Button,
+  Dialog,
+  DialogContent,
 } from "@material-ui/core";
 import {
   Facebook as FacebookIcon,
   GitHub as GitHubIcon,
 } from "@material-ui/icons";
+import Legal from "./Legal";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -26,14 +30,11 @@ const useStyles = makeStyles((theme: Theme) =>
     socialBtn: {
       fontSize: "inherit",
     },
-    legal: {
-      display: "flex",
-      alignItems: "center",
-    },
   })
 );
 
 const Footer: React.FC = () => {
+  const [legal, setLegal] = React.useState(false);
   const classes = useStyles();
 
   return (
@@ -60,13 +61,35 @@ const Footer: React.FC = () => {
               <GitHubIcon htmlColor="#FFFFFF" fontSize="inherit" />
             </IconButton>
           </Grid>
-          <Grid className={classes.legal} item xs={12} md>
-            Copyright 2019 Anvok S.A.S. Tous droits réservés
-            <br />
-            Mentions légales
+          <Grid item xs={12} md>
+            <div>Copyright 2019 Anvok S.A.S. Tous droits réservés</div>
+            <div>
+              <Link
+                color="inherit"
+                href="#"
+                onClick={(event: React.SyntheticEvent) => {
+                  event.preventDefault();
+                  setLegal(true);
+                }}
+              >
+                Mentions légales
+              </Link>
+            </div>
           </Grid>
         </Grid>
       </Container>
+      <Dialog
+        open={legal}
+        onClose={() => setLegal(false)}
+        onClick={() => setLegal(false)}
+        fullWidth
+        maxWidth="lg"
+        scroll="body"
+      >
+        <DialogContent>
+          <Legal />
+        </DialogContent>
+      </Dialog>
     </footer>
   );
 };

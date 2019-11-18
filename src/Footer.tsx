@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             </IconButton>
           </Grid>
           <Grid className={classes.legal} item xs={12} md>
-            Copyright 2019 Anvok S.A.S. All rights reserved
+            Copyright 2019 Anvok S.A.S. Tous droits réservés
             <br />
             Mentions légales
           </Grid>

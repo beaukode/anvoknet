@@ -32,6 +32,15 @@ const Legal: React.FC = () => {
         l'autorisation écrite de ANVOK SAS
       </Typography>
       <Typography variant="h2" color="primary">
+        Hébergement
+      </Typography>
+      <Typography variant="body1">
+        Ce site est hébergé exclusivement sur des datacenters en Europe (Irlande
+        et Allemagne) de la société Amazon Web Services (AWS):
+        <br /> Amazon Web Services EMEA SARL (AWS Europe), 5 RUE PLAETIS,
+        LUXEMBOURG https://aws.amazon.com
+      </Typography>
+      <Typography variant="h2" color="primary">
         Limite de responsabilité
       </Typography>
       <Typography variant="body1">

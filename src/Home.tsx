@@ -138,8 +138,8 @@ const Home: React.FC = () => {
             <Typography variant="body2">
               Ne manquez pas la révolution DevOps, ces dernières années les
               techniques et outils de developpements ont connus une mutation
-              rapide pour répondre aux exigences : Produire plus, plus vite et
-              fiable.
+              rapide pour répondre aux exigences de vos clients, maîtriser et
+              réduire les coûts de production.
             </Typography>
             {ContactButton}
           </Paper>

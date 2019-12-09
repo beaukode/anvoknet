@@ -27,9 +27,15 @@ const Legal: React.FC = () => {
         Droits d'auteurs et crédits
       </Typography>
       <Typography variant="body1">
-        Ce site et son contenu intégral est la propriété de ANVOK SAS. Toute
-        copie, reproduction totale ou partielle est interdite sans
-        l'autorisation écrite de ANVOK SAS
+        <p>
+          Ce site et son contenu intégral est la propriété de ANVOK SAS. Toute
+          copie, reproduction totale ou partielle est interdite sans
+          l'autorisation écrite de ANVOK SAS
+        </p>
+        <p>
+          Les logos, visuels et marques présents sur ce site sont la propriété
+          de leur détenteur respectif.
+        </p>
       </Typography>
       <Typography variant="h2" color="primary">
         Hébergement

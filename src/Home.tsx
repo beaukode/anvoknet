@@ -32,6 +32,7 @@ import {
   AmplifyIcon,
   CircleCiIcon,
   GitHubIcon,
+  NodeJsIcon,
 } from "./Icons";
 import TechIcon from "./TechIcon";
 
@@ -171,6 +172,9 @@ const Home: React.FC = () => {
             </Box>
             <Box display="flex" className={classes.footer}>
               <Box flexGrow={1} className={classes.techicons}>
+                <TechIcon title="NodeJs" href="https://nodejs.org/en/">
+                  <NodeJsIcon />
+                </TechIcon>
                 <TechIcon
                   title="React &amp; React Native"
                   href="https://reactjs.org/"

@@ -13,6 +13,7 @@ import {
 import {
   Facebook as FacebookIcon,
   GitHub as GitHubIcon,
+  LinkedIn as LinkedInIcon,
 } from "@material-ui/icons";
 import Legal from "./Legal";
 
@@ -58,6 +59,15 @@ const Footer: React.FC = () => {
               className={classes.socialBtn}
             >
               <GitHubIcon htmlColor="#FFFFFF" fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              component={Link}
+              href="https://www.linkedin.com/in/jeremie-colombo-093a679b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.socialBtn}
+            >
+              <LinkedInIcon htmlColor="#FFFFFF" fontSize="inherit" />
             </IconButton>
           </Grid>
           <Grid item xs={12} md>

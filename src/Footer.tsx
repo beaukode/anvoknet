@@ -9,19 +9,33 @@ import {
   Link,
   Dialog,
   DialogContent,
+  Box,
+  colors,
 } from "@material-ui/core";
 import {
   Facebook as FacebookIcon,
   GitHub as GitHubIcon,
   LinkedIn as LinkedInIcon,
+  Build as TechIcon,
 } from "@material-ui/icons";
 import Legal from "./Legal";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      color: "#FFFFFF",
       backgroundColor: theme.palette.primary.main,
+    },
+    prefooter: {
+      backgroundColor: "#FFFFFF",
+      color: colors.grey[600],
+      padding: theme.spacing(1),
+      textAlign: "center",
+    },
+    prefooterIcon: {
+      verticalAlign: "middle",
+    },
+    footer: {
+      color: "#FFFFFF",
       padding: theme.spacing(10, 1),
     },
     social: {
@@ -33,13 +47,33 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+function extLink(url: string, name: string): React.ReactNode {
+  return (
+    <Link href={url} target="_blank" rel="noopener noreferrer">
+      {name}
+    </Link>
+  );
+}
+
 const Footer: React.FC = () => {
   const [legal, setLegal] = React.useState(false);
   const classes = useStyles();
 
   return (
     <footer className={classes.root}>
-      <Container>
+      <Box className={classes.prefooter}>
+        <TechIcon className={classes.prefooterIcon} />
+        &nbsp;&nbsp;Ce site est réalisé en javascript&nbsp;
+        {extLink("https://reactjs.org/", "ReactJS")}&nbsp;avec&nbsp;
+        {extLink("https://material-ui.com/", "MaterialUI")}, il est hébergé
+        sur&nbsp;
+        {extLink("https://aws.amazon.com/", "Amazon Web Services")}&nbsp;et
+        déployé en CI/CD avec&nbsp;
+        {extLink("https://aws.amazon.com/amplify/", "AWS Amplify")}, Les
+        messages du formulaire de contact me sont transmis par&nbsp;
+        {extLink("https://aws.amazon.com/sns/", "AWS SNS")}.
+      </Box>
+      <Container className={classes.footer}>
         <Grid container>
           <Grid className={classes.social} item xs={12} md>
             <IconButton

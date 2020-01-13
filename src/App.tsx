@@ -17,6 +17,7 @@ import theme from "./theme";
 import Home from "./Home";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Cv from "./Cv";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -84,7 +85,7 @@ const App: React.FC = () => {
         </ElevationScroll>
         <Switch>
           <Route path="/cv">
-            <div>CV</div>
+            <Cv />
           </Route>
           <Route path="/contact">
             <Contact />

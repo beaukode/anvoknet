@@ -19,6 +19,7 @@ import {
   Build as TechIcon,
 } from "@material-ui/icons";
 import Legal from "./Legal";
+import { extLink } from "./Common";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -46,14 +47,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   })
 );
-
-function extLink(url: string, name: string): React.ReactNode {
-  return (
-    <Link href={url} target="_blank" rel="noopener noreferrer">
-      {name}
-    </Link>
-  );
-}
 
 const Footer: React.FC = () => {
   const [legal, setLegal] = React.useState(false);

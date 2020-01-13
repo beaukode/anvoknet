@@ -45,6 +45,16 @@ export default function() {
           mobile et logiciel afin de réaliser des interfaces modernes, agréables
           et intuitives pour une utilisation interne, externe ou publique.
         </Typography>
+        <Typography variant="body2">
+          Tous mes développements sont réalisés dans un cycle d'intégration et
+          livraison continue CI/CD avec la mise en place d'une chaine de
+          processus automatisé : Dépôt de code, Tests, Construction, Livraison.
+        </Typography>
+        <Typography variant="body2">
+          À chaque modification du code une version privée est mise en
+          ligne et permet au client de suivre l’avancement des travaux n’importe
+          quand et n’importe où.
+        </Typography>
       </Box>
       <Box display="flex">
         <Box flexGrow={1} className={classes.techicons}>
@@ -52,8 +62,11 @@ export default function() {
           <TechIcon variant="reactjs" />
           <TechIcon variant="electronjs" />
           <TechIcon variant="mongodb" />
-          <TechIcon variant="firebase" />
           <TechIcon variant="aws" />
+          <TechIcon variant="git" />
+          <TechIcon variant="amplify" />
+          <TechIcon variant="circleci" />
+          <TechIcon variant="docker" />
         </Box>
         <Box>
           <ContactButton />

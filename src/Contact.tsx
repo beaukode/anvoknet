@@ -12,7 +12,6 @@ import {
   Snackbar,
 } from "@material-ui/core";
 import { Send as SendIcon, Close as CloseIcon } from "@material-ui/icons";
-import * as Scroll from "react-scroll";
 import AWS from "aws-sdk/global";
 import SNS from "aws-sdk/clients/sns";
 
@@ -131,102 +130,100 @@ ${message}`,
 
   return (
     <Container className={classes.root} maxWidth="sm" component="section">
-      <Scroll.Element name="contact">
-        <Typography variant="h2" color="primary">
-          Contact
-        </Typography>
-        <TextField
-          label="Nom &amp; prénom"
-          value={nom}
-          onChange={e => {
-            const value = e.target.value;
-            setNom(value);
-          }}
-          helperText={nomError}
-          error={Boolean(nomError)}
-          required
-          fullWidth
-        />
-        <TextField
-          label="Email"
-          className={classes.field}
-          value={email}
-          onChange={e => {
-            const value = e.target.value;
-            setEmail(value);
-          }}
-          helperText={emailError}
-          error={Boolean(emailError)}
-          required
-          fullWidth
-        />
-        <TextField
-          label="Société"
-          className={classes.field}
-          value={societe}
-          onChange={e => {
-            const value = e.target.value;
-            setSociete(value);
-          }}
-          fullWidth
-        />
-        <TextField
-          label="Message"
-          className={classes.field}
-          value={message}
-          onChange={e => {
-            const value = e.target.value;
-            setMessage(value);
-          }}
-          helperText={messageError}
-          error={Boolean(messageError)}
-          rows={4}
-          rowsMax={20}
-          required
-          multiline
-          fullWidth
-        />
-        <Typography align="right" component="div">
-          <div className={classes.wrapper}>
-            <Button
-              className={classes.button}
-              color="primary"
-              variant="contained"
-              endIcon={<SendIcon />}
-              onClick={send}
-              disabled={loading}
-            >
-              Envoyer
-            </Button>
-            {loading && (
-              <CircularProgress size={24} className={classes.buttonProgress} />
-            )}
-          </div>
-        </Typography>
-        <Snackbar
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
-          }}
-          open={Boolean(confirm)}
-          onClose={handleClose}
-          ContentProps={{
-            "aria-describedby": "message-id",
-            className: confirmClass,
-          }}
-          message={<span id="message-id">{confirm}</span>}
-          action={[
-            <IconButton
-              key="close"
-              aria-label="close"
-              color="inherit"
-              onClick={handleClose}
-            >
-              <CloseIcon />
-            </IconButton>,
-          ]}
-        />
-      </Scroll.Element>
+      <Typography variant="h2" color="primary">
+        Contact
+      </Typography>
+      <TextField
+        label="Nom &amp; prénom"
+        value={nom}
+        onChange={e => {
+          const value = e.target.value;
+          setNom(value);
+        }}
+        helperText={nomError}
+        error={Boolean(nomError)}
+        required
+        fullWidth
+      />
+      <TextField
+        label="Email"
+        className={classes.field}
+        value={email}
+        onChange={e => {
+          const value = e.target.value;
+          setEmail(value);
+        }}
+        helperText={emailError}
+        error={Boolean(emailError)}
+        required
+        fullWidth
+      />
+      <TextField
+        label="Société"
+        className={classes.field}
+        value={societe}
+        onChange={e => {
+          const value = e.target.value;
+          setSociete(value);
+        }}
+        fullWidth
+      />
+      <TextField
+        label="Message"
+        className={classes.field}
+        value={message}
+        onChange={e => {
+          const value = e.target.value;
+          setMessage(value);
+        }}
+        helperText={messageError}
+        error={Boolean(messageError)}
+        rows={4}
+        rowsMax={20}
+        required
+        multiline
+        fullWidth
+      />
+      <Typography align="right" component="div">
+        <div className={classes.wrapper}>
+          <Button
+            className={classes.button}
+            color="primary"
+            variant="contained"
+            endIcon={<SendIcon />}
+            onClick={send}
+            disabled={loading}
+          >
+            Envoyer
+          </Button>
+          {loading && (
+            <CircularProgress size={24} className={classes.buttonProgress} />
+          )}
+        </div>
+      </Typography>
+      <Snackbar
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        open={Boolean(confirm)}
+        onClose={handleClose}
+        ContentProps={{
+          "aria-describedby": "message-id",
+          className: confirmClass,
+        }}
+        message={<span id="message-id">{confirm}</span>}
+        action={[
+          <IconButton
+            key="close"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>,
+        ]}
+      />
     </Container>
   );
 };

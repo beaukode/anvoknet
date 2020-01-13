@@ -6,7 +6,6 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import ContactButton from "./ContactButton";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -40,14 +39,6 @@ export default function() {
           de vos tâches récurrentes telles que la modification de fichiers, le
           traitement de données, la recopie, la gestion de documents, etc...
         </Typography>
-      </Box>
-      <Box display="flex">
-        <Box flexGrow={1} className={classes.techicons}>
-          {" "}
-        </Box>
-        <Box>
-          <ContactButton />
-        </Box>
       </Box>
     </>
   );

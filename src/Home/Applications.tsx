@@ -7,7 +7,6 @@ import {
   Box,
 } from "@material-ui/core";
 import TechIcon from "../TechIcon";
-import ContactButton from "./ContactButton";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -51,26 +50,21 @@ export default function() {
           processus automatisé : Dépôt de code, Tests, Construction, Livraison.
         </Typography>
         <Typography variant="body2">
-          À chaque modification du code une version privée est mise en
-          ligne et permet au client de suivre l’avancement des travaux n’importe
-          quand et n’importe où.
+          À chaque modification du code une version privée est mise en ligne et
+          permet au client de suivre l’avancement des travaux n’importe quand et
+          n’importe où.
         </Typography>
       </Box>
-      <Box display="flex">
-        <Box flexGrow={1} className={classes.techicons}>
-          <TechIcon variant="nodejs" />
-          <TechIcon variant="reactjs" />
-          <TechIcon variant="electronjs" />
-          <TechIcon variant="mongodb" />
-          <TechIcon variant="aws" />
-          <TechIcon variant="git" />
-          <TechIcon variant="amplify" />
-          <TechIcon variant="circleci" />
-          <TechIcon variant="docker" />
-        </Box>
-        <Box>
-          <ContactButton />
-        </Box>
+      <Box className={classes.techicons}>
+        <TechIcon variant="nodejs" />
+        <TechIcon variant="reactjs" />
+        <TechIcon variant="electronjs" />
+        <TechIcon variant="mongodb" />
+        <TechIcon variant="aws" />
+        <TechIcon variant="git" />
+        <TechIcon variant="amplify" />
+        <TechIcon variant="circleci" />
+        <TechIcon variant="docker" />
       </Box>
     </>
   );

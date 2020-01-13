@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import logo from "./img/header-logo.png";
 import { ThemeProvider } from "@material-ui/styles";
-import * as Scroll from "react-scroll";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import theme from "./theme";
 import Home from "./Home";
 import Contact from "./Contact";
@@ -20,16 +20,12 @@ import Footer from "./Footer";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      height: "100%",
-    },
     logo: {
       height: "2rem",
       marginRight: theme.spacing(2),
     },
     title: {
       flexGrow: 1,
-      // maxWidth: 260,
     },
     button: {
       paddingLeft: theme.spacing(2),
@@ -59,7 +55,7 @@ const ElevationScroll: React.FC<ElevationProps> = ({ children }) => {
 const App: React.FC = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Router>
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <ElevationScroll>
@@ -67,23 +63,18 @@ const App: React.FC = () => {
             <Container>
               <Toolbar component="nav">
                 <img src={logo} alt="Logo Anvok" className={classes.logo} />
+
                 <div className={classes.title}>Anvok</div>
-                <Button
-                  className={classes.button}
-                  onClick={() => {
-                    Scroll.animateScroll.scrollToTop();
-                  }}
-                >
+                <Button className={classes.button} component={Link} to="/">
                   Accueil
                 </Button>
-                {/* <Button className={classes.button}>Web &amp; Mobile</Button>
-                <Button className={classes.button}>Applications métiers</Button>
-                <Button className={classes.button}>Consulting DevOps</Button> */}
+                <Button className={classes.button} component={Link} to="/cv">
+                  CV
+                </Button>
                 <Button
                   className={classes.button}
-                  component={Scroll.Link}
-                  to="contact"
-                  smooth={true}
+                  component={Link}
+                  to="/contact"
                 >
                   Contact
                 </Button>
@@ -91,11 +82,20 @@ const App: React.FC = () => {
             </Container>
           </AppBar>
         </ElevationScroll>
-        <Home />
-        <Contact />
+        <Switch>
+          <Route path="/cv">
+            <div>CV</div>
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
         <Footer />
       </ThemeProvider>
-    </div>
+    </Router>
   );
 };
 

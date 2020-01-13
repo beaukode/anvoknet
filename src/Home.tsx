@@ -16,6 +16,7 @@ import {
   Face as CvIcon,
   Work as ReaIcon,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import Web from "./Home/Web";
 import Applications from "./Home/Applications";
 import Metiers from "./Home/Metiers";
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       marginTop: 80,
+      marginBottom: theme.spacing(8),
     },
     paper: {
       padding: theme.spacing(2, 2, 1, 2),
@@ -59,6 +61,30 @@ const Home: React.FC = () => {
       <Grid container spacing={3}>
         <Grid item xs={12} md={2}>
           <Grid container spacing={3}>
+            <Grid item xs={6} md={12}>
+              <Button
+                component={Link}
+                to="/cv"
+                variant="contained"
+                color="secondary"
+                startIcon={<CvIcon />}
+                size="large"
+                fullWidth
+              >
+                CV
+              </Button>
+            </Grid>
+            {/* <Grid item xs={6} md={12}>
+              <Button
+                variant="contained"
+                color="secondary"
+                startIcon={<ReaIcon />}
+                size="large"
+                fullWidth
+              >
+                Réalisations
+              </Button>
+            </Grid> */}
             <Grid item xs={6} md={12}>
               <Button
                 href="https://www.linkedin.com/in/jeremie-colombo-093a679b/"

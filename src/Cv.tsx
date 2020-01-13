@@ -40,6 +40,28 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const intro = (
+  <>
+    Après 18ans d'expérience professionnelle salariée, je propose maintenant mes
+    services en tant que développeur indépendant, je travail à distance ou en
+    mixte.
+    <br />
+    <br />
+    Passionné, j'aime le code propre et fiable, j'évite de réinventé la roue et
+    effectue tous mes développement en CI/CD. J'adore automatiser toutes tâches
+    répétitives, éviter les régressions et que tout fonctionne comme une horloge
+    suisse.
+    <br />
+    <br />
+    Autonome et force de propositions j'ai travaillé sur des projets solo, des
+    projets en équipe et de la gestion d'équipe en tant que CTO.
+    <br />
+    <br />
+    Etant curieux et polymathe j'ai la capacité d'avoir une vision d'un projet
+    informatique dans son ensemble et des interractions entre les composants.
+  </>
+);
+
 const Cv: React.FC = () => {
   const classes = useStyles();
 
@@ -91,27 +113,7 @@ const Cv: React.FC = () => {
               >
                 Développeur FullStack &amp; DevOps
               </Typography>
-              <Typography variant="body2">
-                Après 18ans d'expérience professionnelle salariée, je propose
-                maintenant mes services en tant que développeur indépendant, je
-                travail à distance ou en mixte.
-                <br />
-                <br />
-                Passionné, j'aime le code propre et fiable, j'évite de réinventé
-                la roue et effectue tous mes développement en CI/CD. J'adore
-                automatiser toutes tâches répétitives, éviter les régressions et
-                que tout fonctionne comme une horloge suisse.
-                <br />
-                <br />
-                Autonome et force de propositions j'ai travaillé sur des projets
-                solo, des projets en équipe et de la gestion d'équipe en tant
-                que CTO.
-                <br />
-                <br />
-                Etant curieux et polymathe j'ai la capacité d'avoir une vision
-                d'un projet informatique dans son ensemble et des interractions
-                entre les composants.
-              </Typography>
+              <Typography variant="body2">{intro}</Typography>
             </Paper>
           </Hidden>
           <Paper elevation={1} className={classes.paper}>
@@ -211,21 +213,7 @@ const Cv: React.FC = () => {
               >
                 Développeur FullStack &amp; DevOps
               </Typography>
-              <Typography variant="body2">
-                Après 18ans d'expérience professionnelle salariée, je propose
-                maintenant mes services en tant que développeur indépendant, je
-                travail à distance ou en mixte.
-                <br />
-                <br />
-                Passionné, j'aime le code propre et fiable, j'évite de réinventé
-                la roue et effectue tous mes développement en CI/CD. J'adore
-                automatiser toutes tâches répétitives, éviter les régressions et
-                que tout fonctionne comme une horloge suisse.
-                <br />
-                Autonome et force de propositions j'ai travaillé sur des projets
-                solo, des projets en équipe et de la gestion d'équipe en tant
-                que CTO.
-              </Typography>
+              <Typography variant="body2">{intro}</Typography>
             </Paper>
           </Hidden>
           <Paper elevation={1} className={classes.paper}>

@@ -23,6 +23,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      marginTop: 80,
       marginBottom: theme.spacing(8),
     },
     field: {
@@ -130,7 +131,7 @@ ${message}`,
 
   return (
     <Container className={classes.root} maxWidth="sm" component="section">
-      <Typography variant="h2" color="primary">
+      <Typography variant="h1" color="primary">
         Contact
       </Typography>
       <TextField

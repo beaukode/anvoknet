@@ -70,8 +70,9 @@ const Footer: React.FC = () => {
         {extLink("https://aws.amazon.com/", "Amazon Web Services")}&nbsp;et
         déployé en CI/CD avec&nbsp;
         {extLink("https://aws.amazon.com/amplify/", "AWS Amplify")}, Les
-        messages du formulaire de contact me sont transmis par&nbsp;
-        {extLink("https://aws.amazon.com/sns/", "AWS SNS")}.
+        messages me sont transmis par&nbsp;
+        {extLink("https://aws.amazon.com/sns/", "AWS SNS")},{" "}
+        {extLink("https://github.com/beaukode/anvoknet", "son code est visible sur GitHub")}
       </Box>
       <Container className={classes.footer}>
         <Grid container>

@@ -1,6 +1,43 @@
 import { CvItemDetail } from "./CvItem";
 
-interface CvData {
+export const skillsDev = [
+  "Javascript / Typescript",
+  "ReactJS",
+  "NodeJS",
+  "MongoDb",
+  "MongoDb Stitch",
+  "Amazon Web Services",
+  "PHP",
+  "MySQL",
+];
+
+export const skillsDevOps = [
+  "Git",
+  "CircleCI",
+  "Docker",
+  "Kubernetes",
+  "AWS Amplify, CDK",
+  "Linux",
+];
+
+export const skillsSoft = [
+  "Curiosité",
+  "Relever des défis",
+  "Autonomie",
+  "Créativité",
+  "Motivation",
+];
+
+export const skillsLangues = ["Français: Maternel", "Anglais: Lu"];
+
+export const skillsLoisirs = [
+  "Informatique",
+  "Jeux vidéos",
+  "Musique",
+  "Bricolage et Jardinage",
+];
+
+export interface CvData {
   periode: string;
   label: string;
   structure: string;
@@ -11,7 +48,7 @@ interface CvData {
 
 export const benevolat: CvData[] = [
   {
-    label: "Membre du bureau & valorisation DEEE",
+    label: "Membre du bureau, référent projet FabLab, valorisation DEEE",
     structure: "Ressourcerie Res'Urgence",
     location: "Scey sur saône (70)",
     periode: "Depuis novembre 2016",

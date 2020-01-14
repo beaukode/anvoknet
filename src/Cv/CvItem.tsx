@@ -9,6 +9,7 @@ import {
   ListItem,
   ListItemText,
   Divider,
+  Hidden,
 } from "@material-ui/core";
 import { extLink } from "../Common";
 
@@ -55,12 +56,14 @@ const CvItem: React.FC<Props> = ({
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={3}>
         <Divider />
         <Typography color="textSecondary">{periode}</Typography>
       </Grid>
-      <Grid item xs={9}>
-        <Divider />
+      <Grid item xs={12} sm={9}>
+        <Hidden xsDown>
+          <Divider />
+        </Hidden>
         <Typography
           component="h3"
           className={classes.label}

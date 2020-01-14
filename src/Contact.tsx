@@ -14,6 +14,7 @@ import {
 import { Send as SendIcon, Close as CloseIcon } from "@material-ui/icons";
 import AWS from "aws-sdk/global";
 import SNS from "aws-sdk/clients/sns";
+import Helmet from "react-helmet";
 
 AWS.config.region = "eu-central-1"; // Région
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -131,6 +132,9 @@ ${message}`,
 
   return (
     <Container className={classes.root} maxWidth="sm" component="section">
+      <Helmet>
+        <title>Formulaire de contact</title>
+      </Helmet>
       <Typography variant="h1" color="primary">
         Contact
       </Typography>

@@ -13,6 +13,7 @@ import {
 import logo from "./img/header-logo.png";
 import { ThemeProvider } from "@material-ui/styles";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Helmet from "react-helmet";
 import theme from "./theme";
 import Home from "./Home";
 import Contact from "./Contact";
@@ -58,6 +59,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <CssBaseline />
+      <Helmet titleTemplate="Anvok | %s">
+        <title>Solutions web, mobile et métiers pour les professionnels</title>
+      </Helmet>
       <ThemeProvider theme={theme}>
         <ElevationScroll>
           <AppBar position="fixed" color="primary">

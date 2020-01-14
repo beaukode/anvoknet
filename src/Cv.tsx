@@ -23,6 +23,7 @@ import Moi from "./Cv/Moi";
 import Skills from "./Cv/Skills";
 import Intro from "./Cv/Intro";
 import CvPart from "./Cv/CvPart";
+import Helmet from "react-helmet";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -51,6 +52,9 @@ const Cv: React.FC = () => {
 
   return (
     <Container className={classes.root} component="section">
+      <Helmet>
+        <title>Curriculum vitæ Jérémie Colombo</title>
+      </Helmet>
       <Typography variant="h1" color="primary">
         Curriculum vitæ
         <br />

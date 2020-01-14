@@ -56,7 +56,7 @@ const Home: React.FC = () => {
       <Typography variant="h1" color="primary">
         Solutions web, mobile et métiers pour les professionnels
         <br />
-        <small>Développeur d'application indépendant en freelance</small>
+        <small>Développeur d'applications indépendant en freelance</small>
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={2}>

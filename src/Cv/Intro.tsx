@@ -30,8 +30,9 @@ const Intro: React.FC<Props> = React.memo(({ titleClass }) => {
       <Typography variant="body2">
         Autonome et force de propositions j'ai travaillé sur des projets solo,
         des projets en équipe et de la gestion d'équipe en tant que CTO. Etant
-        curieux et polymathe j'ai la capacité d'avoir une vision d'un projet
-        informatiquedans son ensemble et des interactions entre les composants.
+        curieux et pluri disciplinaire j'ai la capacité d'avoir une vision d'un
+        projet informatiquedans son ensemble et des interactions entre les
+        composants.
       </Typography>
     </>
   );

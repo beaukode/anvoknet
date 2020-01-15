@@ -19,6 +19,7 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Cv from "./Cv";
+import StatsTracking from "./StatsTracking";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -58,6 +59,7 @@ const App: React.FC = () => {
   const classes = useStyles();
   return (
     <Router>
+      <StatsTracking />
       <CssBaseline />
       <Helmet titleTemplate="Anvok | %s">
         <title>Solutions web, mobile et métiers pour les professionnels</title>

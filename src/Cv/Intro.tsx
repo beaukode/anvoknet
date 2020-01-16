@@ -17,11 +17,6 @@ const Intro: React.FC<Props> = React.memo(({ titleClass }) => {
         Développeur FullStack &amp; DevOps
       </Typography>
       <Typography variant="body2">
-        Après 18ans d'expérience professionnelle salariée, je propose maintenant
-        mes services en tant que développeur indépendant, je travail à distance
-        ou en mixte.
-      </Typography>
-      <Typography variant="body2">
         Passionné, j'aime le code propre et fiable, j'évite de réinventé la roue
         et effectue tous mes développement en CI/CD. J'adore automatiser toutes
         tâches répétitives, éviter les régressions et que tout fonctionne comme
@@ -33,6 +28,11 @@ const Intro: React.FC<Props> = React.memo(({ titleClass }) => {
         curieux et pluri disciplinaire j'ai la capacité d'avoir une vision d'un
         projet informatiquedans son ensemble et des interactions entre les
         composants.
+      </Typography>
+      <Typography variant="body2">
+        Après 19ans d'expérience professionnelle salariée, je propose maintenant
+        mes services en tant que développeur indépendant, je travail à distance
+        ou en mixte.
       </Typography>
     </>
   );

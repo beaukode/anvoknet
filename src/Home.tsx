@@ -8,13 +8,11 @@ import {
   Paper,
   Container,
   Button,
-  Box,
 } from "@material-ui/core";
 import {
   GitHub as GitHubIcon,
   LinkedIn as LinkedInIcon,
   Face as CvIcon,
-  Work as ReaIcon,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import Applications from "./Home/Applications";

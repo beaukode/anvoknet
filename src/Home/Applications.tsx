@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function() {
+export default function () {
   const classes = useStyles();
 
   return (
@@ -32,12 +32,11 @@ export default function() {
         color="textPrimary"
         gutterBottom
       >
-        Applications
+        Etude, développement et maintenance d'applications
       </Typography>
       <Box flexGrow={1}>
         <Typography variant="body2">
-          Etude, développement et maintenance d'applications web, mobile android
-          &amp; iOS, Windows, MacOS, Linux
+          Web, mobile android &amp; iOS, Windows, MacOS, Linux
         </Typography>
         <Typography variant="body2">
           Utilisation des dernières technologies d'applications cloud, web,
@@ -57,9 +56,11 @@ export default function() {
       </Box>
       <Box className={classes.techicons}>
         <TechIcon variant="nodejs" />
+        <TechIcon variant="php" />
         <TechIcon variant="reactjs" />
         <TechIcon variant="electronjs" />
         <TechIcon variant="mongodb" />
+        <TechIcon variant="mysql" />
         <TechIcon variant="aws" />
         <TechIcon variant="git" />
         <TechIcon variant="amplify" />

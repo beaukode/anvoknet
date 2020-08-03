@@ -17,15 +17,13 @@ import {
   Work as ReaIcon,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import Web from "./Home/Web";
 import Applications from "./Home/Applications";
-import Metiers from "./Home/Metiers";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       marginTop: 80,
-      marginBottom: theme.spacing(8),
+      marginBottom: theme.spacing(14),
     },
     paper: {
       padding: theme.spacing(2, 2, 1, 2),
@@ -59,7 +57,7 @@ const Home: React.FC = () => {
         <small>Développeur d'applications indépendant en freelance</small>
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} md={4}>
           <Grid container spacing={3}>
             <Grid item xs={6} md={12}>
               <Button
@@ -115,22 +113,10 @@ const Home: React.FC = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={8}>
           <Paper className={classes.paper}>
             <Applications />
           </Paper>
-        </Grid>
-        <Grid item xs={12} md={5}>
-          <Box marginBottom={2}>
-            <Paper className={classes.paper}>
-              <Web />
-            </Paper>
-          </Box>
-          <Box>
-            <Paper className={classes.paper}>
-              <Metiers />
-            </Paper>
-          </Box>
         </Grid>
       </Grid>
     </Container>
